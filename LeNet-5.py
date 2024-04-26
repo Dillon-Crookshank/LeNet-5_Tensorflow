@@ -56,6 +56,6 @@ loss = loss_fn(y_train, model(X_train).numpy())
 
 print(f'Final Loss of Training Set: {loss}')
 
-print('Testing Set Evaluation:')
-evaluation = model.evaluate(X_test, y_test, verbose=2)
+loss, accuracy = model.evaluate(X_test, y_test, verbose=0)
+print(f'Accuracy on Testing Set: {accuracy}')
 
